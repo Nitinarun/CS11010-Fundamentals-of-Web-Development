@@ -1,0 +1,69 @@
+<!doctype html>
+<html class="no-js" lang="" xmlns="http://www.w3.org/1999/xhtml">
+<!--Head of the file -->
+<head>
+    <meta charset="utf-8">
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS11010 Practical 5 Home page</title>
+</head>
+<!--This is the main header of the file -->
+<header>
+    <link rel="stylesheet" href="style.css">
+    <h1>NITIN's Assessment for CS11010</h1>
+</header>
+
+<!--This is the navigation bar-->
+<div class="nav" id="menubar">
+    <nav>
+        <link rel="stylesheet" href="style.css">
+        <a class="active" href="https://users.aber.ac.uk/ara16/CS11010/Prac5/Home.html">Home</a>
+        <a href="https://users.aber.ac.uk/ara16/CS11010/Prac5/About%20Me.html">About Me</a>
+        <a href="https://users.aber.ac.uk/ara16/CS11010/Prac5/About.html">About CS11010</a>
+        <a href="https://users.aber.ac.uk/ara16/CS11010/Prac5/CS11010%20Practical%202%20CV%20web%20page.html">My CV</a>
+    </nav>
+</div>
+
+<!--This is the main body of the file-->
+<main>
+    <img src="https://i.imgflip.com/wxp9k.jpg" alt="image" class="center">
+    <!--Quality reduces when the bar hit 50 if I am really looking but 40 otherwise for the sky-->
+    <img src="IMG_20210307_173004.jpg" alt="Consti Hill Image" style = "max-width: 50%;height: auto;" class="center">
+    <!-- Form for username and grade-->
+    <div class="form_login">
+        <form class="center">
+        <label for="username"><u>Username:</u></label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="grade"><u>What Grade do you think you will get :</u></label><br>
+        <select id="grade" name="grades">
+            <option value="0">0/5</option>
+            <option value="1">1/5</option>
+            <option value="2">2/5</option>
+            <option value="3">3/5</option>
+            <option value="4">4/5</option>
+            <option value="5">5/5</option>
+        </select>
+        <button onclick="outputMessage()">Submit</button>
+    </form>
+    </div><br>
+<!-- Update Time button and Time & Date-->
+    <div>
+        <button onclick="lastModifiedTime()" class="center">Last Modified Time</button>
+        <p id="time"></p>
+        <script>
+            function lastModifiedTime(){
+            var myDate = new Date(document.lastModified);
+            document.getElementById("time").innerHTML = "Last Modified time was: " + myDate.toLocaleDateString('en-GB', {timeZone: 'UTC'});
+        }
+        </script>
+    </div>
+
+    <script>
+        function outputMessage(){
+            var str = document.getElementById("username").value;
+            var val = document.getElementById("grade").value;
+            perc = (val/5)*100;
+            alert("Good Morning, " + str + " and your grade is " + perc + "%");
+        }
+    </script>
+</main>
+</html>

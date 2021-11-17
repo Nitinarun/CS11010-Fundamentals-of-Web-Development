@@ -1,0 +1,48 @@
+/*Headers CSS*/
+header {
+  font-family: "Courier New";
+  text-align: center;
+  text-decoration: underline;
+}
+/*Navigation bar*/
+nav {
+  overflow: hidden;
+  background-color: black;
+  font-family: "Courier New";
+}
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-right: 1px solid white;
+}
+nav a:hover {
+  background-color: #dddd;
+  color: black;
+}
+nav a.active {
+  background-color: orange;
+  color: white;
+}
+/*Body's CSS*/
+body {
+  background-color: #a6a6a6;
+}
+.picture{
+  padding-top: 70px;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+form{
+  display: table-cell;
+  align: center;
+  vertical-align: middle;
+}
